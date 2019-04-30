@@ -1,5 +1,10 @@
 # LicencePlateRecog using dakflow , opencv 
 
+```
+cd Licence_plate_Recognition
+```
+
+
 ``` 
 virtualenv venv
 ```
@@ -31,7 +36,9 @@ python TestPlates.py --image <path_to_img>
 python TestPlates.py --video <path to video >
 ```
 
+
 To show Processing Images/Frames
+
 ```
 python TestPlates.py --video <video File name > --show <(True / False)>
 
