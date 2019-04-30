@@ -49,7 +49,7 @@ python TestPlates.py --video <path to video >
 To show Processing Images/Frames
 
 ```
-python TestPlates.py --video <video File name > --show True/False
+python TestPlates.py --video/image <video/image file path > --show True/False
 
 ```
 
