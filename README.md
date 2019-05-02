@@ -1,5 +1,19 @@
 # LicencePlateRecog using dakflow , opencv 
 
+
+LicencePlateRecognition : we use darkflow (yolo) object detection api for detecting a licence plate in a image then crop the image to process the data in the cropped image.
+
+Here We use pytesseract for detecting ocr data in image , just some modification's in the code you  can use any ocr detection algorithm example use could use GoogleVisionApi too
+
+This Code now works for Images and videos 
+
+Please Follow the enlisted commands below to make the program up and running 
+
+``` 
+cd Licence_plate_Recognition
+```
+
+
 ``` 
 virtualenv venv
 ```
@@ -31,9 +45,11 @@ python TestPlates.py --image <path_to_img>
 python TestPlates.py --video <path to video >
 ```
 
+
 To show Processing Images/Frames
+
 ```
-python TestPlates.py --video <video File name > --show <(True / False)>
+python TestPlates.py --video/image <video/image file path > --show True/False
 
 ```
 
