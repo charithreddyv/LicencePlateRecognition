@@ -6,6 +6,8 @@ from PIL import Image
 import sys
 import io
 import os
+import numpy as np
+
 parser= argparse.ArgumentParser(description='Process Image for Licence Plates')
 parser.add_argument('-i','--image',metavar='',required=False, help='location of the image to be processed')
 parser.add_argument('-v','--video',metavar='',required=False,help='location of the video file')
@@ -105,19 +107,28 @@ def process_image(val,img):
 
 def process_video(val,frame):
   if val:
-    result = predict_from_img(frame)
-    for i in range(len(result)):
-      showPlates(result,frame)
-      cropped_image = crop_image(frame,result,i)
-      save_img(enhance_image(cropped_image))
-      ocr_process()
+    if np.any(frame):  
+      result = predict_from_img(frame)
+      for i in range(len(result)):
+        showPlates(result,frame)
+        cropped_image = crop_image(frame,result,i)
+        save_img(enhance_image(cropped_image))
+        ocr_process()
+    else:
+      print('cleaning Data')
+      os.remove('Image.jpg')
+      sys.exit(0)
   else:
-    result = predict_from_img(frame)
-    for i in range(len(result)):
-      cropped_image = crop_image(frame,result,i)
-      save_img(enhance_image(cropped_image))
-      ocr_process()
-
+    if np.any(frame):
+      result = predict_from_img(frame)
+      for i in range(len(result)):
+        cropped_image = crop_image(frame,result,i)
+        save_img(enhance_image(cropped_image))
+        ocr_process()
+    else:
+      print('cleaning Data')
+      os.remove('Image.jpg')
+      sys.exit(0)
 
 
 if args.image:
