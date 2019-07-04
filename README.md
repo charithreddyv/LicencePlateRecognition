@@ -10,7 +10,7 @@ This Code now works for Images and videos
 Please Follow the enlisted commands below to make the program up and running 
 
 ``` 
-cd Licence_plate_Recognition
+cd LicencePlateRecognition
 ```
 
 
@@ -32,30 +32,31 @@ source env.sh
 ```
 
 #usage
+
 ```
-python TestPlates.py -i <path_to_img>
+python runPlates.py -i <path_to_img>
 ```
 (or)
 
 ```
-python TestPlates.py --image <path_to_img>
+python runPlates.py --image <path_to_img>
 ```
 (processing video's)
 ```
-python TestPlates.py --video <path to video >
+python runPlates.py --video <path to video >
 ```
 
 
 To show Processing Images/Frames
 
 ```
-python TestPlates.py --video/image <video/image file path > --show True/False
+python runPlates.py --video/image <video/image file path > --show True/False
 
 ```
 
 (for all options)
 
 ```
-python TestPlates.py -h 
+python runPlates.py -h 
 ```
 
