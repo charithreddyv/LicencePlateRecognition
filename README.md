@@ -27,8 +27,9 @@ pip install -r requirements.txt
 ``` 
 pip install . 
 ```
+(or)
 ```
-source env.sh
+python setup.py build_ext --inplace
 ```
 
 #usage
