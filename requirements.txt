@@ -1,5 +1,5 @@
 tensorflow
-opencv-python==3.4.4.19 
+opencv-python==4.2.0.32 
 numpy==1.15.4
 Cython==0.29.1
 h5py==2.9.0
