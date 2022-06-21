@@ -1,6 +1,6 @@
 tensorflow
 opencv-python==3.4.4.19 
-numpy==1.15.4
+numpy==1.22.0
 Cython==0.29.1
 h5py==2.9.0
 Pillow==6.2.0
